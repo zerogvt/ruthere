@@ -30,9 +30,9 @@ func ping(url string, c chan string) bool {
 	_, err := http.Get(url)
 	res := err == nil
 	if res {
-		log.Println(url, "is reachabe")
+		log.Println(url, " is up")
 	} else {
-		log.Println(url, "is not reachabe")
+		log.Println(url, " is down")
 	}
 	c <- url
 	return res
